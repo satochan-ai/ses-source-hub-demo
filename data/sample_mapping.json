@@ -1,0 +1,35 @@
+{
+  "_comment": "運用の正はGoogleスプレッドシート上の mapping_config シートです。このJSONは初期投入用サンプル、バックアップ、または将来的な設定エクスポート用として扱います。",
+  "mappings": [
+    {
+      "partner_id": "PARTNER_A",
+      "data_type": "project",
+      "config": [
+        { "source": "案件名", "target": "title", "required": true },
+        { "source": "案件概要", "target": "overview", "required": false },
+        { "source": "必須スキル", "target": "required_skills", "required": true },
+        { "source": "尚可スキル", "target": "preferred_skills", "required": false },
+        { "source": "単価", "target": "price", "required": false },
+        { "source": "勤務地", "target": "location", "required": false },
+        { "source": "リモート", "target": "remote_type", "required": false },
+        { "source": "開始時期", "target": "start_date", "required": false },
+        { "source": "備考", "target": "note", "required": false }
+      ]
+    },
+    {
+      "partner_id": "PARTNER_B",
+      "data_type": "engineer",
+      "config": [
+        { "source": "氏名", "target": "name", "required": true },
+        { "source": "職種", "target": "role", "required": false },
+        { "source": "年齢", "target": "age", "required": false },
+        { "source": "最寄り", "target": "nearest_station", "required": false },
+        { "source": "スキル", "target": "skills", "required": true },
+        { "source": "希望単価", "target": "price", "required": false },
+        { "source": "稼働可能日", "target": "available_date", "required": false },
+        { "source": "リモート希望", "target": "remote_preference", "required": false },
+        { "source": "備考", "target": "note", "required": false }
+      ]
+    }
+  ]
+}

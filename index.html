@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SES Source Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-area">
+                    <h1>SES Source Hub</h1>
+                    <p class="subtitle">案件・人材情報を横断検索するための集約ツール</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="error-container"></div>
+        <section class="summary-section">
+            <div class="summary-grid" id="summary-container">
+                <div class="summary-card">
+                    <div class="summary-icon">📁</div>
+                    <div class="summary-info">
+                        <div class="label">案件数</div>
+                        <div class="value" id="summary-projects-count">--</div>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">👤</div>
+                    <div class="summary-info">
+                        <div class="label">人材数</div>
+                        <div class="value" id="summary-engineers-count">--</div>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">🤝</div>
+                    <div class="summary-info">
+                        <div class="label">取引先数</div>
+                        <div class="value" id="summary-partners-count">--</div>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">🕒</div>
+                    <div class="summary-info">
+                        <div class="label">最終更新日</div>
+                        <div class="value date" id="summary-last-update">--</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="search-box">
+                <form id="search-form">
+                    <div class="search-tabs">
+                        <label class="tab-btn">
+                            <input type="radio" name="dataType" value="project" checked>
+                            <span>案件を検索</span>
+                        </label>
+                        <label class="tab-btn">
+                            <input type="radio" name="dataType" value="engineer">
+                            <span>人材を検索</span>
+                        </label>
+                    </div>
+
+                    <div class="search-grid">
+                        <div class="search-item full">
+                            <label for="keyword">キーワード</label>
+                            <input type="text" id="keyword" placeholder="スキル、案件名、フリーワード...">
+                        </div>
+                        <div class="search-item">
+                            <label for="filter-skill">スキル選択</label>
+                            <select id="filter-skill">
+                                <option value="">すべて</option>
+                            </select>
+                        </div>
+                        <div class="search-item">
+                            <label for="filter-partner">取得元会社</label>
+                            <select id="filter-partner">
+                                <option value="">すべて</option>
+                            </select>
+                        </div>
+                        <div class="search-item">
+                            <label for="filter-remote">リモート可否</label>
+                            <select id="filter-remote">
+                                <option value="">すべて</option>
+                            </select>
+                        </div>
+                        <div class="search-item">
+                            <label>単価範囲</label>
+                            <div class="range-group">
+                                <input type="number" id="price-min" placeholder="下限">
+                                <span>〜</span>
+                                <input type="number" id="price-max" placeholder="上限">
+                                <span>(万円)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-actions">
+                        <button type="button" id="reset-btn" class="btn secondary">リセット</button>
+                        <button type="submit" class="btn primary">検索する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="results-header">
+                <h2 id="results-count-text">全件表示</h2>
+            </div>
+            <div id="results-container" class="results-grid">
+                <!-- 結果カードがここに描画される -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <p>&copy; 2026 SES Source Hub Project</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

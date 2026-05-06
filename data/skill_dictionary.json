@@ -1,0 +1,62 @@
+{
+  "Java": {
+    "aliases": ["java", "JAVA"],
+    "related": ["Spring", "Spring Boot", "Struts"],
+    "exclude": ["JavaScript"]
+  },
+  "JavaScript": {
+    "aliases": ["JS", "javascript"],
+    "related": ["TypeScript", "React", "Vue", "Next.js"],
+    "exclude": []
+  },
+  "TypeScript": {
+    "aliases": ["TS", "typescript"],
+    "related": ["React", "Angular", "NestJS"],
+    "exclude": []
+  },
+  "PHP": {
+    "aliases": ["php"],
+    "related": ["Laravel", "Symfony", "WordPress"],
+    "exclude": []
+  },
+  "Python": {
+    "aliases": ["python"],
+    "related": ["Django", "Flask", "Pandas"],
+    "exclude": []
+  },
+  "React": {
+    "aliases": ["react", "React.js"],
+    "related": ["Next.js", "Redux"],
+    "exclude": []
+  },
+  "Vue": {
+    "aliases": ["vue", "Vue.js"],
+    "related": ["Nuxt.js", "Vuex"],
+    "exclude": []
+  },
+  "AWS": {
+    "aliases": ["aws", "Amazon Web Services"],
+    "related": ["EC2", "S3", "Lambda", "RDS"],
+    "exclude": []
+  },
+  "Azure": {
+    "aliases": ["azure", "Microsoft Azure"],
+    "related": ["Virtual Machines", "Azure Functions"],
+    "exclude": []
+  },
+  "Linux": {
+    "aliases": ["linux"],
+    "related": ["Ubuntu", "CentOS", "Debian"],
+    "exclude": []
+  },
+  "PM": {
+    "aliases": ["pm", "Project Manager"],
+    "related": ["マネジメント", "進捗管理"],
+    "exclude": ["PMO"]
+  },
+  "PMO": {
+    "aliases": ["pmo", "Project Management Office"],
+    "related": ["ドキュメント作成", "事務局"],
+    "exclude": []
+  }
+}
